@@ -1,0 +1,25 @@
+/* ===== 强制覆盖 Footer 文字颜色 ===== */
+/* 针对所有文字（包括版权信息、链接等） */
+#footer * {
+  color: #333 !important; /* 白天模式强制深灰色 */
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5); /* 浅色阴影增强对比度 */
+}
+
+/* 夜间模式适配 */
+[data-theme="dark"] #footer * {
+  color: #fff !important; /* 夜间模式强制白色 */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== 增强毛玻璃效果 ===== */
+#footer {
+  background: rgba(255, 255, 255, 0.7) !important; /* 提高透明度确保文字可读 */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* 浅色边框增加层次 */
+}
+
+[data-theme="dark"] #footer {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
