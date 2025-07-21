@@ -1,0 +1,29 @@
+/* 更精美的风车动画 */
+.svg-windmill {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.svg-windmill:hover {
+    transform: scale(1.1);
+}
+
+.windmill-blade {
+    transform-origin: center;
+    animation: windmillSpin 4s linear infinite;
+    stroke-linecap: round;
+}
+
+@keyframes windmillSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] .windmill-blade {
+    stroke: rgba(255,255,255,0.9);
+}

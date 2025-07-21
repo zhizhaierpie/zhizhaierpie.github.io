@@ -13,7 +13,9 @@
 
 /* ===== 增强毛玻璃效果 ===== */
 #footer {
-  background: rgba(255, 255, 255, 0.7) !important; /* 提高透明度确保文字可读 */
+  height: 120px !important; /* 新增：设置页脚高度 */
+  min-height: 120px !important; /* 新增：确保最小高度 */
+  background: rgba(200, 230, 255, 0.7) !important; /* 提高透明度确保文字可读 */
   backdrop-filter: blur(15px) !important;
   -webkit-backdrop-filter: blur(15px) !important;
   border-top: 1px solid rgba(0, 0, 0, 0.1); /* 浅色边框增加层次 */
@@ -22,4 +24,17 @@
 [data-theme="dark"] #footer {
   background: rgba(0, 0, 0, 0.6) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== 强制修改 Footer 高度 ===== */
+#footer {
+  height: 150px !important;  /* 设置固定高度 */
+  min-height: 150px !important;  /* 防止内容溢出时高度塌陷 */
+}
+
+/* 调整内部容器以适应新高度 */
+#footer-wrap {
+  height: 100% !important;  /* 确保内容区域填满整个 Footer */
+  padding: 20px 0 !important;  /* 调整内边距 */
+  box-sizing: border-box !important;  /* 防止 padding 影响高度计算 */
 }

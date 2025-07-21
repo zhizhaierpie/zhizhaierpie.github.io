@@ -1,0 +1,20 @@
+/* 修复后的逐字渐显效果 */
+.char-reveal {
+    opacity: 0;
+    display: inline-block; /* 确保空格也能正确显示 */
+    white-space: pre; /* 保留原始空格 */
+    animation: charReveal 0.5s cubic-bezier(0.5, 0, 0.1, 1) forwards;
+}
+
+@keyframes charReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 智能延迟 - 通过JS设置 */

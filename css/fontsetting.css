@@ -1,6 +1,18 @@
+/* 定义字体 */
 @font-face {
-    /*字体名称，名字可以随便起，但是注意要一致，建议英文*/
-    font-family: 'SweiSans';
+    font-family: 'Yozai';
+    src: url('/font/Yozai-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
     font-display: swap;
-    src: url('/font/Yozai-Medium.ttf') format("truetype");
-  }
+}
+
+/* 应用字体到全局 */
+body {
+    font-family: 'Yozai', -apple-system, sans-serif;
+}
+
+/* 可选：单独设置标题字体 */
+.post-title {
+    font-family: 'Yozai', -apple-system, sans-serif;
+}

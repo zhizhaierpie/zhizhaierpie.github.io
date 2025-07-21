@@ -1,0 +1,28 @@
+/* 确保标题容器正确处理空白字符 */
+.post-title, .page-title {
+    white-space: normal;
+}
+
+/* 修复动画完成后的小跳动 */
+.char-reveal {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+/* 中文特殊处理 - 每个字符作为整体动画 */
+.lang-zh .char-reveal,
+.lang-cn .char-reveal {
+    display: inline;
+    animation-name: charRevealCN;
+}
+
+@keyframes charRevealCN {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

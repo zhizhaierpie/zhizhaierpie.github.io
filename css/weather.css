@@ -1,0 +1,30 @@
+/* source/css/weather.css */
+#weather-widget {
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#weather-widget img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    #weather-widget {
+        top: 5px;
+        right: 5px;
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+}
