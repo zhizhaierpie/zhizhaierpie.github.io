@@ -217,7 +217,6 @@ template {
 .container.post-content h6:before,
 .container.post-content hr:before,
 #post .post-copyright:before,
-#post #post-outdate-notice:before,
 .note:not(.no-icon)::before,
 .search-dialog hr:before {
   display: inline-block;
@@ -3859,6 +3858,9 @@ figure.highlight pre .javascript .function {
   color: #49b1f5;
   text-decoration: underline;
 }
+#post-info #post-meta time {
+  display: none;
+}
 #nav {
   position: absolute;
   top: 0;
@@ -4603,23 +4605,9 @@ figure.highlight pre .javascript .function {
   background-color: #ffe6e6;
   color: #f66;
   border-radius: 3px;
-  padding: 0.5em 1em 0.5em 2.6em;
-  border-left: 5px solid #ff8080;
 }
 #post #post-outdate-notice .num {
   padding: 0 4px;
-}
-#post #post-outdate-notice:before {
-  position: absolute;
-  top: 50%;
-  left: 0.9em;
-  color: #ff8080;
-  content: '\f071';
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 #post .ads-wrap {
   margin: 40px 0;
