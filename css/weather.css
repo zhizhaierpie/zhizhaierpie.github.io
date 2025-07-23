@@ -1,7 +1,7 @@
 /* source/css/weather.css */
 #weather-widget {
     position: fixed;
-    top: 65px;
+    top: 400px;
     right: 20px;
     z-index: 999;
     background: rgba(255, 255, 255, 0.5);
